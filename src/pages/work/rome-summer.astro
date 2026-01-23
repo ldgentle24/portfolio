@@ -1,0 +1,158 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import ImageGallery from '../../components/ImageGallery.astro';
+import showcaseData from '../../data/showcases/rome-summer.json';
+---
+
+<PageLayout title="Rome Summer" description="Observing Rome at its most unforgiving">
+  <article class="project">
+    <div class="container">
+      <header class="project-header">
+        <h1 class="project-title">Rome Summer / Roman Holiday</h1>
+        <p class="project-tagline">Observing Rome at its most unforgiving</p>
+      </header>
+
+      <div class="project-hero">
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/gu7WH5eK34E"
+            title="Rome Summer - Visual Journey"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            class="hero-video"
+          ></iframe>
+        </div>
+      </div>
+
+      <div class="project-content">
+        <section class="content-section">
+          <h2>What it is</h2>
+          <p>
+            A short cinematic visual project observing Rome at its most unforgiving. Set during
+            peak summer, it focuses on heat, stillness, and human behavior under pressure—capturing
+            the city not as a postcard, but as a place you endure before you appreciate.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>What problem it solves</h2>
+          <p>
+            Rome is usually portrayed as eternally romantic and effortlessly charming. This project
+            pushes back on that fantasy, showing the friction: the oppressive sun, the slowed pace,
+            the small coping rituals. It reframes the city as something lived in, not consumed.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Approach & methods</h2>
+          <ul>
+            <li>Narrative-driven visual sequencing rather than standalone shots</li>
+            <li>Controlled, intentional camera movement</li>
+            <li>High-contrast daylight and hard shadows as storytelling tools</li>
+            <li>Voiceover used as commentary, not explanation</li>
+            <li>Mood-first pacing over informational structure</li>
+          </ul>
+        </section>
+
+        <section class="content-section">
+          <h2>Tools</h2>
+          <ul>
+            <li>Image generation: Nano Banana Pro</li>
+            <li>Video generation: Veo 3.1 and Kling 2.6</li>
+            <li>Editing & pacing: CapCut</li>
+            <li>Voice-over generation: ElevenLabs</li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- Image Gallery Showcase -->
+      <ImageGallery
+        showcaseData={showcaseData}
+        showCaptions={true}
+        captionPosition="below"
+      />
+    </div>
+  </article>
+</PageLayout>
+
+<style>
+  .project {
+    padding-top: clamp(6rem, 12vw, 10rem);
+    padding-bottom: clamp(4rem, 8vw, 6rem);
+  }
+
+  .project-header {
+    margin-bottom: clamp(3rem, 6vw, 5rem);
+  }
+
+  .project-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .project-tagline {
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    opacity: 0.7;
+  }
+
+  .project-hero {
+    margin-bottom: clamp(4rem, 8vw, 6rem);
+  }
+
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .project-content {
+    max-width: 800px;
+  }
+
+  .content-section {
+    margin-bottom: clamp(3rem, 6vw, 4rem);
+  }
+
+  .content-section h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: 1rem;
+  }
+
+  .content-section p {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    line-height: 1.7;
+    opacity: 0.9;
+  }
+
+  .content-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .content-section li {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    line-height: 1.7;
+    opacity: 0.9;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .content-section li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+  }
+</style>

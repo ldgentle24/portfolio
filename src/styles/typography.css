@@ -1,0 +1,93 @@
+/* Typography Scale */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* Display - Homepage Hero */
+.text-display {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+/* Large Heading */
+h1,
+.text-h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+/* Medium Heading */
+h2,
+.text-h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+/* Small Heading */
+h3,
+.text-h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+/* Subheading */
+.text-subheading {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* Body Text */
+p,
+.text-body {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.7;
+  max-width: 65ch;
+}
+
+/* Small Text */
+.text-small {
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+}
+
+/* Text Utilities */
+.text-uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-muted {
+  opacity: 0.6;
+}
+
+/* Spacing for Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}

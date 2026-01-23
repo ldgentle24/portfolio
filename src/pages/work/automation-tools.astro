@@ -1,0 +1,122 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+---
+
+<PageLayout title="Automation Tools" description="Building systems that work while you sleep">
+  <article class="project">
+    <div class="container">
+      <header class="project-header">
+        <h1 class="project-title">Automation Tools</h1>
+        <p class="project-tagline">Building systems that work while you sleep</p>
+      </header>
+
+      <div class="project-hero">
+        <div class="hero-placeholder">
+          UPDATE SOON
+        </div>
+      </div>
+
+      <div class="project-content">
+        <section class="content-section">
+          <h2>What it is</h2>
+          <p>
+            A suite of automation tools designed to streamline repetitive workflows,
+            from data processing to content distribution, saving hours of manual work.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>What problem it solves</h2>
+          <p>
+            Many businesses waste valuable time on repetitive tasks that could be
+            automated. These tools identify bottlenecks in workflows and create
+            reliable, maintainable automation solutions that scale.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Tools & methods</h2>
+          <ul>
+            <li>Node.js & Python scripts</li>
+            <li>API integrations (Zapier, Make)</li>
+            <li>Database automation (PostgreSQL)</li>
+            <li>Scheduled tasks & webhooks</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </article>
+</PageLayout>
+
+<style>
+  .project {
+    padding-top: clamp(6rem, 12vw, 10rem);
+    padding-bottom: clamp(4rem, 8vw, 6rem);
+  }
+
+  .project-header {
+    margin-bottom: clamp(3rem, 6vw, 5rem);
+  }
+
+  .project-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .project-tagline {
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    opacity: 0.7;
+  }
+
+  .project-hero {
+    margin-bottom: clamp(4rem, 8vw, 6rem);
+  }
+
+  .hero-placeholder {
+    aspect-ratio: 16 / 9;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    opacity: 0.5;
+  }
+
+  .project-content {
+    max-width: 800px;
+  }
+
+  .content-section {
+    margin-bottom: clamp(3rem, 6vw, 4rem);
+  }
+
+  .content-section h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: 1rem;
+  }
+
+  .content-section p {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    line-height: 1.7;
+    opacity: 0.9;
+  }
+
+  .content-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .content-section li {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    line-height: 1.7;
+    opacity: 0.9;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .content-section li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+  }
+</style>

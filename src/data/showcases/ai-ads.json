@@ -1,0 +1,25 @@
+{
+  "projectId": "ai-ads",
+  "projectName": "AI Ads",
+  "liveUrl": "",
+  "images": [
+    {
+      "id": 1,
+      "filename": "kb.png",
+      "alt": "Main product featured in the AI-generated advertisement",
+      "caption": "The hero product - AI-optimized creative showcasing key features"
+    },
+    {
+      "id": 2,
+      "filename": "girl.png",
+      "alt": "Main character featured in the advertisement campaign",
+      "caption": "Brand ambassador - connecting product with audience through AI insights"
+    },
+    {
+      "id": 3,
+      "filename": "monitor_looking.png",
+      "alt": "Scene showing character interacting with the product",
+      "caption": "Product in action - demonstrating real-world use case"
+    }
+  ]
+}

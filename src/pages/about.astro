@@ -1,0 +1,105 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+---
+
+<PageLayout title="About" description="About me and what I do">
+  <section class="about-section">
+    <div class="container">
+      <h1 class="about-title">About</h1>
+
+      <div class="about-content">
+        <p class="lead">
+          I build things that matter—sometimes with code, sometimes with stories,
+          sometimes with machines that hallucinate.
+        </p>
+
+        <p>
+          My work sits at the intersection of technology and creativity. I'm
+          interested in systems that scale, narratives that resonate, and
+          interfaces that feel inevitable.
+        </p>
+
+        <p>
+          I've worked on everything from automation tools that save hours of
+          manual work to visual projects that capture fleeting moments. The
+          common thread: attention to detail and a bias toward simplicity.
+        </p>
+
+        <p>
+          Currently exploring AI-assisted creative workflows and building tools
+          that make complex tasks feel effortless.
+        </p>
+
+        <div class="skills">
+          <h2>What I work with</h2>
+          <ul>
+            <li>JavaScript/TypeScript, Python, React</li>
+            <li>AI/ML tools and APIs</li>
+            <li>Automation & workflow design</li>
+            <li>Photography & visual storytelling</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</PageLayout>
+
+<style>
+  .about-section {
+    min-height: 100vh;
+    padding-top: clamp(6rem, 12vw, 10rem);
+    padding-bottom: clamp(4rem, 8vw, 6rem);
+  }
+
+  .about-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    margin-bottom: clamp(3rem, 6vw, 5rem);
+  }
+
+  .about-content {
+    max-width: 800px;
+  }
+
+  .lead {
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+
+  .about-content p {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    opacity: 0.85;
+  }
+
+  .skills {
+    margin-top: clamp(3rem, 6vw, 4rem);
+  }
+
+  .skills h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: 1.5rem;
+  }
+
+  .skills ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .skills li {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    line-height: 1.7;
+    opacity: 0.85;
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+  }
+
+  .skills li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+  }
+</style>

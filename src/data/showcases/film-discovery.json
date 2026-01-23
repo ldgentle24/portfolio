@@ -1,0 +1,43 @@
+{
+  "projectId": "film-discovery",
+  "projectName": "Film & TV Discovery Platform",
+  "liveUrl": "https://summertime-movie-app.vercel.app/",
+  "images": [
+    {
+      "id": 1,
+      "filename": "hero-ui.jpeg",
+      "alt": "Movie detail page showing clean, editorial design",
+      "caption": "Hero UI - Movie detail page with Criterion-style layout"
+    },
+    {
+      "id": 2,
+      "filename": "search-results.jpeg",
+      "alt": "Search results grid displaying multiple films",
+      "caption": "Discovery grid with intuitive search and filtering"
+    },
+    {
+      "id": 3,
+      "filename": "filtering.jpeg",
+      "alt": "Advanced filtering interface with categories and tags",
+      "caption": "Multi-filter logic with hashtags and category selection"
+    },
+    {
+      "id": 4,
+      "filename": "trending.jpeg",
+      "alt": "Trending section showing popular content",
+      "caption": "Trending and recommendation system with data-driven insights"
+    },
+    {
+      "id": 5,
+      "filename": "trailer-integration.jpeg",
+      "alt": "Trailer and media integration interface",
+      "caption": "Seamless trailer integration without autoplay"
+    },
+    {
+      "id": 6,
+      "filename": "tv-show-detail.jpeg",
+      "alt": "TV show detail page with season and episode navigation",
+      "caption": "TV show deep dive with season/episode tabs and episode list"
+    }
+  ]
+}

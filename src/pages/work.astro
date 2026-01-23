@@ -1,0 +1,74 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+const projects = [
+  {
+    title: 'Rome Summer',
+    description: 'A visual journey through the eternal city',
+    href: '/work/rome-summer',
+  },
+  {
+    title: 'Film Discovery',
+    description: 'Reimagining how we find and explore cinema',
+    href: '/work/film-discovery',
+  },
+  {
+    title: 'AI Ads',
+    description: 'Machine learning meets creative advertising',
+    href: '/work/ai-ads',
+  },
+  {
+    title: 'Phin Time',
+    description: 'A visual ritual of Vietnamese coffee-making',
+    href: '/work/phin-time',
+  },
+  {
+    title: 'Automation Tools',
+    description: 'Building systems that work while you sleep',
+    href: '/work/automation-tools',
+  },
+];
+---
+
+<PageLayout title="Work" description="Selected projects and case studies">
+  <section class="work-section">
+    <div class="container">
+      <h1 class="work-title">Selected Work</h1>
+      <div class="projects-grid">
+        {projects.map(project => (
+          <ProjectCard
+            title={project.title}
+            description={project.description}
+            href={project.href}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+</PageLayout>
+
+<style>
+  .work-section {
+    min-height: 100vh;
+    padding-top: clamp(6rem, 12vw, 10rem);
+    padding-bottom: clamp(4rem, 8vw, 6rem);
+  }
+
+  .work-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    margin-bottom: clamp(3rem, 6vw, 5rem);
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+  }
+
+  @media (min-width: 768px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

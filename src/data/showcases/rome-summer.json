@@ -1,0 +1,37 @@
+{
+  "projectId": "rome-summer",
+  "projectName": "Rome Summer",
+  "liveUrl": "",
+  "images": [
+    {
+      "id": 1,
+      "filename": "character.png",
+      "alt": "Main characters from the Rome Summer film",
+      "caption": "The protagonists - capturing authentic moments in the eternal city"
+    },
+    {
+      "id": 2,
+      "filename": "gelato_store.png",
+      "alt": "Gelato store scene background",
+      "caption": "Iconic Roman gelato store - a backdrop for everyday life"
+    },
+    {
+      "id": 3,
+      "filename": "alley_drink.png",
+      "alt": "Characters enjoying drinks in a Roman alley",
+      "caption": "Aperitivo in the alley - where locals and visitors meet"
+    },
+    {
+      "id": 4,
+      "filename": "at_the_restaurant.png",
+      "alt": "Characters dining at a traditional pasta restaurant",
+      "caption": "Pasta and conversation - the heart of Roman dining culture"
+    },
+    {
+      "id": 5,
+      "filename": "bridge_fullview.png",
+      "alt": "Wide view of a Roman bridge scene",
+      "caption": "Ponte panorama - Rome's timeless architecture in frame"
+    }
+  ]
+}

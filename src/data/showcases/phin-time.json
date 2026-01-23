@@ -1,0 +1,43 @@
+{
+  "projectId": "phin-time",
+  "projectName": "Phin Time",
+  "liveUrl": "",
+  "images": [
+    {
+      "id": 1,
+      "filename": "phin_powder.png",
+      "alt": "Pouring coffee powder into traditional Vietnamese phin filter",
+      "caption": "Step 1: Pour coffee powder into the phin - the foundation of ritual"
+    },
+    {
+      "id": 2,
+      "filename": "hot_water.png",
+      "alt": "Pouring hot water into the phin filter",
+      "caption": "Step 2: Add hot water - beginning the slow extraction"
+    },
+    {
+      "id": 3,
+      "filename": "brew.png",
+      "alt": "Coffee brewing slowly through the phin filter",
+      "caption": "Step 3: Let it brew - patience rewarded with rich, dark coffee"
+    },
+    {
+      "id": 4,
+      "filename": "milk_in.png",
+      "alt": "Pouring condensed milk into the brewed coffee",
+      "caption": "Step 4: Add condensed milk - sweetness meets intensity"
+    },
+    {
+      "id": 5,
+      "filename": "stir_it.png",
+      "alt": "Stirring the milk and coffee together",
+      "caption": "Step 5: Stir gently - watching the swirl of cream and coffee"
+    },
+    {
+      "id": 6,
+      "filename": "ice_in.png",
+      "alt": "Adding ice to complete the Vietnamese iced coffee",
+      "caption": "Step 6: Add ice and enjoy - the perfect balance achieved"
+    }
+  ]
+}

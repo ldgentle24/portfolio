@@ -1,0 +1,40 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  href: string;
+}
+
+const { title, description, href } = Astro.props;
+---
+
+<a href={href} class="project-card">
+  <h3 class="project-title">{title}</h3>
+  <p class="project-description">{description}</p>
+</a>
+
+<style>
+  .project-card {
+    display: block;
+    padding: clamp(2rem, 4vw, 3rem);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease;
+  }
+
+  .project-card:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .project-title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+
+  .project-description {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    opacity: 0.7;
+    line-height: 1.6;
+  }
+</style>

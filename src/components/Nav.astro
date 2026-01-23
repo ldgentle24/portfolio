@@ -1,0 +1,83 @@
+---
+const currentPath = Astro.url.pathname;
+
+const navLinks = [
+  { href: '/work', label: 'Work' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
+];
+---
+
+<nav class="nav">
+  <div class="nav-container">
+    <a href="/" class="nav-logo">
+      <span class="visually-hidden">Home</span>
+      <span aria-hidden="true">◼</span>
+    </a>
+    <ul class="nav-links">
+      {navLinks.map(link => (
+        <li>
+          <a
+            href={link.href}
+            class:list={['nav-link', { active: currentPath.startsWith(link.href) }]}
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</nav>
+
+<style>
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1.5rem, 5vw, 4rem);
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  .nav-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    transition: opacity 0.2s ease;
+  }
+
+  .nav-logo:hover {
+    opacity: 0.7;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: clamp(1.5rem, 3vw, 3rem);
+    list-style: none;
+  }
+
+  .nav-link {
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: opacity 0.2s ease;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    opacity: 0.7;
+  }
+
+  @media (max-width: 640px) {
+    .nav-links {
+      gap: 1rem;
+    }
+  }
+</style>
