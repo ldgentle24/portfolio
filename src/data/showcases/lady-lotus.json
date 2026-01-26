@@ -1,0 +1,43 @@
+{
+  "projectId": "lady-lotus",
+  "projectName": "Lady by the Lotus",
+  "liveUrl": "",
+  "images": [
+    {
+      "id": 1,
+      "filename": "raw_model.png",
+      "alt": "Original reference image of a Vietnamese woman in her early 20s",
+      "caption": "Base model reference — natural posture, neutral expression, unstyled for design accuracy"
+    },
+    {
+      "id": 2,
+      "filename": "product.png",
+      "alt": "Traditional Vietnamese áo dài with accompanying accessories displayed on the model",
+      "caption": "Product focus — the áo dài and accessories showcased in clean, clear detail"
+    },
+    {
+      "id": 3,
+      "filename": "pose_full.png",
+      "alt": "Model wearing the áo dài in a full-body standing pose",
+      "caption": "Pose variation — full silhouette highlighting the flow and structure of the áo dài"
+    },
+    {
+      "id": 4,
+      "filename": "pose_sit.png",
+      "alt": "Model seated gracefully while wearing the traditional áo dài",
+      "caption": "Pose variation — seated posture emphasizing elegance and softness"
+    },
+    {
+      "id": 5,
+      "filename": "pose_lean.png",
+      "alt": "Model leaning slightly while dressed in the áo dài",
+      "caption": "Pose variation — relaxed lean creating a natural, candid mood"
+    },
+    {
+      "id": 6,
+      "filename": "scene.png",
+      "alt": "Model in a traditional Vietnamese house setting surrounded by cultural elements",
+      "caption": "Main scene — a classic Vietnamese home, blending tradition and atmosphere"
+    }
+  ]
+}

@@ -16,13 +16,15 @@ interface ShowcaseData {
 interface Props {
   showcaseData: ShowcaseData;
   showCaptions?: boolean;
-  captionPosition?: 'below' | 'overlay';
+  captionPosition?: "below" | "overlay";
+  imageOrientation?: "landscape" | "portrait";
 }
 
 const {
   showcaseData,
   showCaptions = true,
-  captionPosition = 'below',
+  captionPosition = "below",
+  imageOrientation = "landscape",
 } = Astro.props;
 
 const { projectId, projectName, liveUrl, images } = showcaseData;
@@ -35,36 +37,47 @@ const { projectId, projectName, liveUrl, images } = showcaseData;
 
   <div class="gallery-container">
     <div class="gallery-scroll">
-      {images.map((image, index) => (
-        <div class="gallery-item">
-          <div class="image-wrapper">
-            <img
-              src={`/images/showcases/${projectId}/${image.filename}`}
-              alt={image.alt}
-              loading={index === 0 ? 'eager' : 'lazy'}
-              class="gallery-image"
-            />
-          </div>
-          {showCaptions && captionPosition === 'below' && (
-            <p class="image-caption">{image.caption}</p>
-          )}
-          {showCaptions && captionPosition === 'overlay' && (
-            <div class="caption-overlay">
-              <p class="image-caption">{image.caption}</p>
+      {
+        images.map((image, index) => (
+          <div
+            class={`gallery-item ${imageOrientation === "portrait" ? "gallery-item--portrait" : ""}`}
+          >
+            <div class="image-wrapper">
+              <img
+                src={`/images/showcases/${projectId}/${image.filename}`}
+                alt={image.alt}
+                loading={index === 0 ? "eager" : "lazy"}
+                class="gallery-image"
+              />
             </div>
-          )}
-        </div>
-      ))}
+            {showCaptions && captionPosition === "below" && (
+              <p class="image-caption">{image.caption}</p>
+            )}
+            {showCaptions && captionPosition === "overlay" && (
+              <div class="caption-overlay">
+                <p class="image-caption">{image.caption}</p>
+              </div>
+            )}
+          </div>
+        ))
+      }
     </div>
   </div>
 
-  {liveUrl && (
-    <div class="showcase-link">
-      <a href={liveUrl} target="_blank" rel="noopener noreferrer" class="live-link">
-        View live site →
-      </a>
-    </div>
-  )}
+  {
+    liveUrl && (
+      <div class="showcase-link">
+        <a
+          href={liveUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="live-link"
+        >
+          View live site →
+        </a>
+      </div>
+    )
+  }
 </section>
 
 <style>
@@ -123,6 +136,10 @@ const { projectId, projectName, liveUrl, images } = showcaseData;
     width: clamp(300px, 80vw, 800px);
   }
 
+  .gallery-item--portrait {
+    width: clamp(100px, 30vw, 300px);
+  }
+
   .image-wrapper {
     position: relative;
     width: 100%;
@@ -130,6 +147,10 @@ const { projectId, projectName, liveUrl, images } = showcaseData;
     background: rgba(255, 255, 255, 0.03);
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .gallery-item--portrait .image-wrapper {
+    aspect-ratio: 9 / 16;
   }
 
   .gallery-image {
@@ -199,6 +220,10 @@ const { projectId, projectName, liveUrl, images } = showcaseData;
       width: clamp(280px, 85vw, 400px);
     }
 
+    .gallery-item--portrait {
+      width: clamp(200px, 35vw, 300px);
+    }
+
     .caption-overlay {
       opacity: 1;
       background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
@@ -209,6 +234,9 @@ const { projectId, projectName, liveUrl, images } = showcaseData;
   @media (min-width: 641px) and (max-width: 1024px) {
     .gallery-item {
       width: clamp(400px, 70vw, 600px);
+    }
+    .gallery-item--portrait {
+      width: clamp(250px, 40vw, 400px);
     }
   }
 </style>
