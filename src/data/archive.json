@@ -1,8 +1,134 @@
 {
   "journalism": {
-    "intro": "A selection of articles from my time working in online journalism.",
+    "intro": "Football analysis and news I wrote for the Vietnamese sports sites Bongda.com.vn and Tinthethao.com.vn. The articles are in Vietnamese; headlines here are translated.",
     "moreUrl": "",
-    "articles": []
+    "categories": [
+      {
+        "name": "Player Analysis",
+        "articles": [
+          {
+            "title": "Daniel James has proven that Ole's calculations were entirely reasonable",
+            "outlet": "Bongda.com.vn",
+            "url": "https://www.bongda.com.vn/daniel-james-da-chung-minh-nhung-tinh-toan-cua-ole-la-hoan-toan-hop-ly-d593037.html"
+          },
+          {
+            "title": "Without penalties, what has Bruno contributed to United?",
+            "outlet": "Tinthethao.com.vn",
+            "url": "https://www.tinthethao.com.vn/khong-co-pen-bruno-da-dong-gop-duoc-gi-cho-mu-d616730.html"
+          },
+          {
+            "title": "Luke Shaw becomes a complete wing-back: Ole deserves credit",
+            "outlet": "Bongda.com.vn",
+            "url": "https://www.bongda.com.vn/luke-shaw-tro-thanh-hau-ve-canh-toan-dien-ole-can-duoc-ghi-cong-d594346.html"
+          }
+        ]
+      },
+      {
+        "name": "Data Analysis",
+        "articles": [
+          {
+            "title": "Why having more possession does not necessarily bring victory",
+            "outlet": "Bongda.com.vn",
+            "url": "https://www.bongda.com.vn/vi-sao-kiem-soat-bong-nhieu-chua-chac-da-mang-lai-chien-thang-d590904.html"
+          }
+        ]
+      },
+      {
+        "name": "Tactical Analysis",
+        "articles": [
+          {
+            "title": "How did United play against Southampton?",
+            "outlet": "Bongda.com.vn",
+            "url": "https://www.bongda.com.vn/mu-da-choi-the-nao-truoc-southampton-d591166.html"
+          }
+        ]
+      },
+      {
+        "name": "Financial Analysis",
+        "articles": [
+          {
+            "title": "Don't panic: the story of Juventus and the master of flexibility",
+            "outlet": "Tinthethao.com.vn",
+            "url": "https://www.tinthethao.com.vn/dung-hoang-so-cau-chuyen-ve-juventus-va-bac-thay-cua-su-uyen-chuyen-d479179.html"
+          }
+        ]
+      },
+      {
+        "name": "Behind the Scenes",
+        "articles": [
+          {
+            "title": "De Gea's girlfriend posts another cryptic message: should United fans be worried?",
+            "outlet": "Bongda.com.vn",
+            "url": "https://www.bongda.com.vn/ban-gai-de-gea-lai-dang-tin-an-y-fan-mu-co-dang-lo-so-d446553.html"
+          }
+        ]
+      },
+      {
+        "name": "Interviews",
+        "articles": [
+          {
+            "title": "Klopp: I want more Scousers in the team",
+            "outlet": "Bongda.com.vn",
+            "url": "https://www.bongda.com.vn/klopp-toi-muon-nhieu-hon-nhung-nguoi-scouse-trong-doi-hinh-d457596.html"
+          }
+        ]
+      },
+      {
+        "name": "Transfer News",
+        "articles": [
+          {
+            "title": "Manchester United's 2018 summer transfer situation",
+            "outlet": "Tinthethao.com.vn",
+            "url": "https://www.tinthethao.com.vn/tinh-hinh-chuyen-nhuong-he-2018-cua-manchester-united-d482386.html"
+          }
+        ]
+      },
+      {
+        "name": "Breaking News",
+        "articles": [
+          {
+            "title": "Official: USA, Canada and Mexico to co-host the 2026 World Cup",
+            "outlet": "Tinthethao.com.vn",
+            "url": "https://www.tinthethao.com.vn/chinh-thuc-my-canada-va-mexico-se-la-dong-chu-nha-cua-world-cup-2026-d475971.html"
+          },
+          {
+            "title": "Official: Brazil announce their 2018 World Cup squad",
+            "outlet": "Bongda.com.vn",
+            "url": "https://www.bongda.com.vn/chinh-thuc-brazil-cong-bo-doi-hinh-tham-du-world-cup-2018-d445430.html"
+          }
+        ]
+      },
+      {
+        "name": "Football Stories",
+        "articles": [
+          {
+            "title": "The story of special shirt numbers at United, part 2: the number 9 shirt",
+            "outlet": "Tinthethao.com.vn",
+            "url": "https://www.tinthethao.com.vn/cau-chuyen-ve-nhung-so-ao-dac-biet-o-mu-ki-2-chiec-ao-so-9-d474560.html"
+          },
+          {
+            "title": "Newton Heath: from outsiders to 20 English league titles",
+            "outlet": "Bongda.com.vn",
+            "url": "https://www.bongda.com.vn/newton-heath--tu-nhung-ga-ngoai-dao-den-20-lan-vo-dich-nuoc-anh-d455608.html"
+          },
+          {
+            "title": "The golden World Cup trophy and things you may not know",
+            "outlet": "Tinthethao.com.vn",
+            "url": "https://www.tinthethao.com.vn/cup-vang-world-cup-va-nhung-dieu-co-the-ban-chua-biet-d480535.html"
+          },
+          {
+            "title": "Chicharito: the little pea at the Theatre of Dreams",
+            "outlet": "Tinthethao.com.vn",
+            "url": "https://www.tinthethao.com.vn/chicharito-hat-dau-nho-o-noi-nha-hat-lon-d474272.html"
+          },
+          {
+            "title": "Koeman: more than a coach, a true Cule",
+            "outlet": "Tinthethao.com.vn",
+            "url": "https://www.tinthethao.com.vn/koeman-hon-ca-mot-hlv-la-mot-cule-dich-thuc-d621922.html"
+          }
+        ]
+      }
+    ]
   },
   "community": {
     "name": "EnKay Store",

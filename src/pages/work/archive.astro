@@ -3,7 +3,7 @@ import PageLayout from '../../layouts/PageLayout.astro';
 import archive from '../../data/archive.json';
 
 const { journalism, community } = archive;
-const hasArticles = journalism.articles.length > 0;
+const hasArticles = journalism.categories.length > 0;
 ---
 
 <PageLayout title="Archive" description="Earlier work in journalism and community building">
@@ -19,17 +19,21 @@ const hasArticles = journalism.articles.length > 0;
           <section class="content-section">
             <h2>Journalism</h2>
             <p>{journalism.intro}</p>
-            <ul class="article-list">
-              {journalism.articles.map((a) => (
-                <li>
-                  <a href={a.url} target="_blank" rel="noopener noreferrer" class="article-link">
-                    <span class="article-title">{a.title}</span>
-                    <span class="article-meta">{a.outlet}{a.year ? ` · ${a.year}` : ''}</span>
-                  </a>
-                  {a.summary && <p class="article-summary">{a.summary}</p>}
-                </li>
-              ))}
-            </ul>
+            {journalism.categories.map((cat) => (
+              <div class="category">
+                <h3 class="category-name">{cat.name}</h3>
+                <ul class="article-list">
+                  {cat.articles.map((a) => (
+                    <li>
+                      <a href={a.url} target="_blank" rel="noopener noreferrer" class="article-link">
+                        <span class="article-title">{a.title}</span>
+                        <span class="article-meta">{a.outlet}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
             {journalism.moreUrl && (
               <p>
                 <a href={journalism.moreUrl} target="_blank" rel="noopener noreferrer" class="text-link">
@@ -101,10 +105,20 @@ const hasArticles = journalism.articles.length > 0;
     margin-bottom: 1rem;
   }
 
+  .category {
+    margin-top: 2rem;
+  }
+
+  .category-name {
+    font-size: clamp(1.125rem, 2vw, 1.25rem);
+    opacity: 0.6;
+    font-weight: 600;
+  }
+
   .article-list {
     list-style: none;
     padding: 0;
-    margin: 1.5rem 0;
+    margin: 0.75rem 0 0;
   }
 
   .article-list li {
