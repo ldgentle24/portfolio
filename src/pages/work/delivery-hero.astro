@@ -1,0 +1,168 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+---
+
+<PageLayout title="The Delivery Hero" description="A delivery guy, a jetpack fantasy, and one security camera chirp">
+  <article class="project">
+    <div class="container">
+      <header class="project-header">
+        <h1 class="project-title">The Delivery Hero</h1>
+        <p class="project-tagline">A delivery guy, a jetpack fantasy, and one security camera chirp</p>
+      </header>
+
+      <div class="project-hero">
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/6U2-dWd2yRk"
+            title="The Delivery Hero - AI-generated spec ad"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            class="hero-video"
+          ></iframe>
+        </div>
+      </div>
+
+      <div class="project-content">
+        <section class="content-section">
+          <h2>What it is</h2>
+          <p>
+            An 18-second spec ad and visual comedy. A delivery worker imagines himself as a hero from a 1950s sci-fi comic, with jetpack flames, brass horns and slow-motion flight over garden gnomes. A security camera chirp snaps him back to reality, and he sets the package on a velvet pillow, salutes, and slips away. The homeowner watches the replay and raises one eyebrow.
+          </p>
+          <p>
+            It is a spec concept for a security camera product, with no real delivery service or client behind it.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>What problem it solves</h2>
+          <p>
+            A doorstep camera sees what people do when they think no one is watching. This film makes that idea fun to watch by showing two versions of one delivery: the one in his head and the one on camera.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Core idea</h2>
+          <p>
+            Two visual languages, one character. The fantasy is theatrical, retro and loud. The reality is flat, minimal and quiet.
+          </p>
+          <p>
+            The security alert is the cut between them, and the FRAGILE package is the one prop that appears in both.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Structure</h2>
+          <ul>
+            <li>Clip 1, Fantasy (0:00–0:05): the retro sci-fi superhero delivery</li>
+            <li>Clip 2, Snap (0:05–0:08): the camera chirp ends the fantasy</li>
+            <li>Clip 3, Pivot (0:08–0:14): flamingo-pose freeze, careful package handling, a small salute, a quiet exit</li>
+            <li>Clip 4, Payoff (0:14–0:18): the homeowner replays the footage with an arched eyebrow</li>
+          </ul>
+        </section>
+
+        <section class="content-section">
+          <h2>Approach & methods</h2>
+          <ul>
+            <li>A 1950s sci-fi comic look for the fantasy, set against a flat minimalist look for reality</li>
+            <li>An audio cue, not a visual one, as the trigger for the shift between the two modes</li>
+            <li>Exaggerated heroism followed by exaggerated caution, so the second half reverses the first</li>
+            <li>The package kept as the central prop in every clip for continuity</li>
+            <li>An understated final reaction, so the viewer gets the joke without dialogue</li>
+          </ul>
+        </section>
+
+        <section class="content-section">
+          <h2>Tools</h2>
+          <ul>
+            <li>Image generation: GPT Image 2.5 Sunburst, Nano Banana 2.1</li>
+            <li>Video generation: Seedance 2.5, Veo 3 Fast</li>
+            <li>Sound design & music: ElevenLabs</li>
+            <li>Editing & compositing: Adobe Premiere Pro, After Effects</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </article>
+</PageLayout>
+
+<style>
+  .project {
+    padding-top: clamp(6rem, 12vw, 10rem);
+    padding-bottom: clamp(4rem, 8vw, 6rem);
+  }
+
+  .project-header {
+    margin-bottom: clamp(3rem, 6vw, 5rem);
+  }
+
+  .project-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .project-tagline {
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    opacity: 0.7;
+  }
+
+  .project-hero {
+    margin-bottom: clamp(4rem, 8vw, 6rem);
+  }
+
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .project-content {
+    max-width: 800px;
+  }
+
+  .content-section {
+    margin-bottom: clamp(3rem, 6vw, 4rem);
+  }
+
+  .content-section h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: 1rem;
+  }
+
+  .content-section p {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    line-height: 1.7;
+    opacity: 0.9;
+  }
+
+  .content-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .content-section li {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    line-height: 1.7;
+    opacity: 0.9;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .content-section li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+  }
+</style>

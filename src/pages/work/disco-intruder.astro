@@ -1,0 +1,168 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+---
+
+<PageLayout title="The Disco Intruder" description="A sneaky mission, ruined by an alarm and saved by disco">
+  <article class="project">
+    <div class="container">
+      <header class="project-header">
+        <h1 class="project-title">The Disco Intruder</h1>
+        <p class="project-tagline">A sneaky mission, ruined by an alarm and saved by disco</p>
+      </header>
+
+      <div class="project-hero">
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/541c6I9WtbY"
+            title="The Disco Intruder - AI-generated spec ad"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            class="hero-video"
+          ></iframe>
+        </div>
+      </div>
+
+      <div class="project-content">
+        <section class="content-section">
+          <h2>What it is</h2>
+          <p>
+            A 15-second spec ad and security-camera comedy. An uncle sneaks toward a garden hose, trips an alarm, and turns his getaway into a disco dance backward through the gate. The camera catches all of it. The last shot is a woman eating noodles while she watches the replay.
+          </p>
+          <p>
+            It is a spec concept for a security camera product, with no real brand or client behind it.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>What problem it solves</h2>
+          <p>
+            Home security is easy to pitch through fear or spec sheets. This film takes the opposite route and shows the product as the reason an everyday mishap becomes something to laugh about later.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Core idea</h2>
+          <p>
+            The joke lives in the gap between a man trying to stay invisible and a body that suddenly cannot. The alarm is the hinge: before it, a stealth mission; after it, a performance.
+          </p>
+          <p>
+            The camera is both the cause of the comedy and the reason it can be replayed.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Structure</h2>
+          <ul>
+            <li>Clip 1, Sneak (0:00–0:03): the uncle creeps toward the hose</li>
+            <li>Clip 2, Trigger (0:03–0:06): the alarm goes off and the mission is blown</li>
+            <li>Clip 3, Disco Save (0:06–0:11): an exaggerated disco exit, backward through the gate</li>
+            <li>Clip 4, Reality Cut (0:11–0:15): a woman, noodles, and the replay</li>
+          </ul>
+        </section>
+
+        <section class="content-section">
+          <h2>Approach & methods</h2>
+          <ul>
+            <li>Hand-drawn comic-book look: bold outlines, textured paper, retro psychedelic colors</li>
+            <li>Exaggerated body language and readable silhouettes so each beat reads in a few seconds</li>
+            <li>One character design held across all four clips: brown hair, mustache, purple sunglasses, patterned shirt, blue jeans</li>
+            <li>Four separately generated clips, each carrying one distinct beat of the joke</li>
+            <li>A deliberately calm final cut to contrast with the chaos before it, ending on the strongest moment</li>
+          </ul>
+        </section>
+
+        <section class="content-section">
+          <h2>Tools</h2>
+          <ul>
+            <li>Image generation: GPT Image 2.5 Sunburst, Nano Banana 2.1</li>
+            <li>Video generation: Seedance 2.5, Veo 3 Fast</li>
+            <li>Sound design & music: ElevenLabs</li>
+            <li>Editing & compositing: Adobe Premiere Pro, After Effects</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </article>
+</PageLayout>
+
+<style>
+  .project {
+    padding-top: clamp(6rem, 12vw, 10rem);
+    padding-bottom: clamp(4rem, 8vw, 6rem);
+  }
+
+  .project-header {
+    margin-bottom: clamp(3rem, 6vw, 5rem);
+  }
+
+  .project-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .project-tagline {
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    opacity: 0.7;
+  }
+
+  .project-hero {
+    margin-bottom: clamp(4rem, 8vw, 6rem);
+  }
+
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .project-content {
+    max-width: 800px;
+  }
+
+  .content-section {
+    margin-bottom: clamp(3rem, 6vw, 4rem);
+  }
+
+  .content-section h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: 1rem;
+  }
+
+  .content-section p {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    line-height: 1.7;
+    opacity: 0.9;
+  }
+
+  .content-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .content-section li {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    line-height: 1.7;
+    opacity: 0.9;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .content-section li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+  }
+</style>
