@@ -1,0 +1,144 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import archive from '../../data/archive.json';
+
+const { journalism, community } = archive;
+const hasArticles = journalism.articles.length > 0;
+---
+
+<PageLayout title="Archive" description="Earlier work in journalism and community building">
+  <article class="project">
+    <div class="container">
+      <header class="project-header">
+        <h1 class="project-title">Archive</h1>
+        <p class="project-tagline">Earlier work in writing and community building</p>
+      </header>
+
+      <div class="project-content">
+        {hasArticles && (
+          <section class="content-section">
+            <h2>Journalism</h2>
+            <p>{journalism.intro}</p>
+            <ul class="article-list">
+              {journalism.articles.map((a) => (
+                <li>
+                  <a href={a.url} target="_blank" rel="noopener noreferrer" class="article-link">
+                    <span class="article-title">{a.title}</span>
+                    <span class="article-meta">{a.outlet}{a.year ? ` · ${a.year}` : ''}</span>
+                  </a>
+                  {a.summary && <p class="article-summary">{a.summary}</p>}
+                </li>
+              ))}
+            </ul>
+            {journalism.moreUrl && (
+              <p>
+                <a href={journalism.moreUrl} target="_blank" rel="noopener noreferrer" class="text-link">
+                  See all articles
+                </a>
+              </p>
+            )}
+          </section>
+        )}
+
+        <section class="content-section">
+          <h2>Retail &amp; Community</h2>
+          <p>
+            {community.name} was a small shop selling football trading cards. I started a Facebook
+            group alongside it as a place for collectors to buy, sell and trade cards with each other.
+          </p>
+          <p>
+            It is now a public group of {community.members} members (as of {community.asOf}), built
+            around one niche: Topps, Panini, Futera and Poca cards in Vietnam.
+          </p>
+          <p>
+            <a href={community.groupUrl} target="_blank" rel="noopener noreferrer" class="text-link">
+              Visit the group
+            </a>
+          </p>
+        </section>
+      </div>
+    </div>
+  </article>
+</PageLayout>
+
+<style>
+  .project {
+    padding-top: clamp(6rem, 12vw, 10rem);
+    padding-bottom: clamp(4rem, 8vw, 6rem);
+  }
+
+  .project-header {
+    margin-bottom: clamp(3rem, 6vw, 5rem);
+  }
+
+  .project-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .project-tagline {
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    opacity: 0.7;
+  }
+
+  .project-content {
+    max-width: 800px;
+  }
+
+  .content-section {
+    margin-bottom: clamp(3rem, 6vw, 4rem);
+  }
+
+  .content-section h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: 1rem;
+  }
+
+  .content-section p {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    line-height: 1.7;
+    opacity: 0.9;
+    margin-bottom: 1rem;
+  }
+
+  .article-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+  }
+
+  .article-list li {
+    padding: 1rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .article-link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .article-title {
+    font-size: clamp(1.125rem, 2vw, 1.25rem);
+    font-weight: 600;
+  }
+
+  .article-meta {
+    font-size: 0.95rem;
+    opacity: 0.6;
+  }
+
+  .article-summary {
+    margin: 0.5rem 0 0;
+    opacity: 0.8;
+  }
+
+  .article-link:hover .article-title,
+  .text-link:hover {
+    text-decoration: underline;
+  }
+
+  .text-link {
+    font-weight: 600;
+  }
+</style>
