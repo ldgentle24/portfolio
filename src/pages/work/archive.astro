@@ -20,8 +20,11 @@ const hasArticles = journalism.categories.length > 0;
             <h2>Journalism</h2>
             <p>{journalism.intro}</p>
             {journalism.categories.map((cat) => (
-              <div class="category">
-                <h3 class="category-name">{cat.name}</h3>
+              <details class="category">
+                <summary class="category-name">
+                  <span>{cat.name}</span>
+                  <span class="category-count">{cat.articles.length}</span>
+                </summary>
                 <ul class="article-list">
                   {cat.articles.map((a) => (
                     <li>
@@ -32,7 +35,7 @@ const hasArticles = journalism.categories.length > 0;
                     </li>
                   ))}
                 </ul>
-              </div>
+              </details>
             ))}
             {journalism.moreUrl && (
               <p>
@@ -106,24 +109,60 @@ const hasArticles = journalism.categories.length > 0;
   }
 
   .category {
-    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .category:last-of-type {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .category-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 0;
     font-size: clamp(1.125rem, 2vw, 1.25rem);
-    opacity: 0.6;
     font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .category-name::-webkit-details-marker {
+    display: none;
+  }
+
+  .category-name::after {
+    content: '+';
+    font-weight: 400;
+    opacity: 0.6;
+    margin-left: auto;
+    order: 3;
+  }
+
+  .category[open] > .category-name::after {
+    content: '\2212';
+  }
+
+  .category-count {
+    font-size: 0.95rem;
+    font-weight: 400;
+    opacity: 0.5;
+    margin-left: -0.5rem;
+  }
+
+  .category-name:hover {
+    opacity: 0.8;
   }
 
   .article-list {
     list-style: none;
     padding: 0;
-    margin: 0.75rem 0 0;
+    margin: 0 0 1rem;
   }
 
   .article-list li {
-    padding: 1rem 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.75rem 0;
   }
 
   .article-link {
