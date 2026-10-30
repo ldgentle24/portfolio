@@ -55,6 +55,11 @@ const projects = [
   <section class="work-section">
     <div class="container">
       <h1 class="work-title">Selected Work</h1>
+      <a href="/work/archive" class="archive-card">
+        <h2 class="archive-title">Archive</h2>
+        <p class="archive-description">Earlier work in writing and community building</p>
+      </a>
+      <hr class="work-divider" />
       <div class="projects-grid">
         {
           projects.map((project) => (
@@ -80,6 +85,36 @@ const projects = [
   .work-title {
     font-size: clamp(2.5rem, 6vw, 4.5rem);
     margin-bottom: clamp(3rem, 6vw, 5rem);
+  }
+
+  .archive-card {
+    display: block;
+    padding: clamp(2rem, 4vw, 3rem);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease;
+  }
+
+  .archive-card:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .archive-title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+
+  .archive-description {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    opacity: 0.7;
+    line-height: 1.6;
+  }
+
+  .work-divider {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin: clamp(2rem, 4vw, 3rem) 0;
   }
 
   .projects-grid {
